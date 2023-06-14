@@ -1,0 +1,68 @@
+:root {
+
+
+  /* Colors */
+
+  --green: #25D366;
+  --blue: #34B7F1;
+  --gray: #E1E1E1;
+
+  --font: 'Lato', sans-serif;
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-black: 900;
+}
+html{
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+*,*::after,*::before{
+  box-sizing: inherit;
+}
+body{
+  font-size: 1.6rem;
+  font-family: var(--font);
+  font-weight: var(--fw-regular);
+}
+img{
+  max-width: 100%;
+  height: auto;
+}
+button{
+  border: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+}
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+.container {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 0 var(--border-space);
+}
+
+
+
+
+
+/* CONTACT */
+.contact{
+  margin-top: 10rem;
+  display: flex;
+  gap: .5rem;
+}
+
+.contact input{
+  border-radius: 1rem;
+  outline: none;
+  border: thin solid var(--gray);
+  padding: 0 1.5rem;
+  flex: 1;
+}

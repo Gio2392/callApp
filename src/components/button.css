@@ -1,0 +1,24 @@
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    border-radius: 1rem;
+    
+    transition: all .3s ease-in-out;
+}
+.green{
+    background: var(--green);
+}
+.blue{
+    background: var(--blue);
+}
+.btn:hover.green,
+.btn:hover.blue{
+    opacity: .9;
+}
+.btn svg{
+    width: 2.4rem;
+    height: 2.4rem;
+}
