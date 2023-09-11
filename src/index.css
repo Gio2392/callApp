@@ -3,9 +3,22 @@
 
   /* Colors */
 
+  --red: #dc3545;
   --green: #25D366;
   --blue: #34B7F1;
   --gray: #E1E1E1;
+
+  /* DARK MODE */
+
+  
+  --bgDark: #2E363F;
+  --grayDark: #192129;
+  --grayDark-90: #19212990;
+  --inputDark: #414868;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* FONT */
 
   --font: 'Lato', sans-serif;
   --fw-light: 300;
@@ -23,6 +36,8 @@ body{
   font-size: 1.6rem;
   font-family: var(--font);
   font-weight: var(--fw-regular);
+
+  background: var(--bgDark);
 }
 img{
   max-width: 100%;
@@ -42,27 +57,48 @@ ul,li{
 a{
   text-decoration: none;
 }
+h1, h2, h3, p{
+  margin: 0;
+  padding: 0;
+}
 .container {
-  max-width: 60rem;
+  max-width: 99.2rem;
   margin: 0 auto;
   padding: 0 var(--border-space);
 }
 
-
+.text {
+  color: var(--white);
+  text-align: center;
+  padding-top: 10rem;
+}
 
 
 
 /* CONTACT */
 .contact{
-  margin-top: 10rem;
   display: flex;
   gap: .5rem;
 }
+.form{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
 
-.contact input{
+.input{
   border-radius: 1rem;
   outline: none;
-  border: thin solid var(--gray);
-  padding: 0 1.5rem;
+  /* border: thin solid var(--gray); */
+  border: thin solid var(--bgDark);
+  padding: 1rem 1.5rem;
   flex: 1;
+
+  
+
+
+  background: var(--inputDark);
+  color: var(--white);
 }
+
+

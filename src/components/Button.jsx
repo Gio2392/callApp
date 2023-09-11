@@ -1,6 +1,6 @@
 import './button.css'
 
-export const Button = ({children, color, link, target = false}) => {
+export const ButtonLink = ({children, color, link, target = false}) => {
   return (
     <a 
     href={link} 
@@ -9,5 +9,16 @@ export const Button = ({children, color, link, target = false}) => {
     rel={target ? 'noopener noreferrer' : ''}>
         {children}
     </a>
+  )
+}
+export const Button = ({children, color, onClick, disabled = false}) => {
+  return (
+    <button 
+    className={`btn ${color}`} 
+    onClick={onClick}
+    disabled={disabled}
+    >
+        {children}
+    </button>
   )
 }

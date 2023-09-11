@@ -1,0 +1,36 @@
+.aside{
+    position: absolute;
+    padding: 0 2rem;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    width: var(--width_aside);
+
+    background-color: var(--grayDark);
+
+}
+.aside__top .logo{
+    padding: 2rem 0;
+    border-bottom: thin solid var(--inputDark);
+}
+.aside a{
+    display: block;
+}
+.aside__btn{
+    padding: 2rem 0;
+    opacity: .5;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    color: var(--white);
+    transition: all .3s ease-in-out;
+    border-top: thin solid var(--inputDark);
+}
+.aside__btn:hover{
+    opacity: 1;
+}

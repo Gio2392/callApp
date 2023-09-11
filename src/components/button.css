@@ -1,4 +1,8 @@
 .btn{
+    color: var(--white);
+
+    font-weight: var(--fw-regular);
+    gap: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,17 +12,28 @@
     
     transition: all .3s ease-in-out;
 }
+
 .green{
     background: var(--green);
 }
 .blue{
     background: var(--blue);
 }
+.red{
+    background: var(--red);
+}
 .btn:hover.green,
-.btn:hover.blue{
+.btn:hover.blue,
+.btn:hover.red{
     opacity: .9;
 }
 .btn svg{
     width: 2.4rem;
     height: 2.4rem;
+}
+.btn:disabled,
+.btn:disabled:hover {
+    opacity: .9;
+    cursor: auto;
+    background: var(--gray);
 }

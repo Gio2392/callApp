@@ -1,0 +1,14 @@
+.contacts{
+width: 50rem;
+}
+.contact__item{
+    display: flex;
+    justify-content: space-between;
+}
+.contact__info{
+    display: flex;
+    flex-direction: column;
+}
+.contact__actions{
+    display: flex;
+}

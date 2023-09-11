@@ -1,40 +1,27 @@
-import { useState } from 'react'
-import { Button } from './components/Button';
-import { CallIcon, WhatsappIcon } from './icons';
+import { AppRouter } from './router/AppRouter';
 
 function App() {
 
-  const [phone, setPhone] = useState({
-    number: ''
-  })
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    
-    setPhone({...phone, [name]: value})
-  }
-
   return (
     <>
-     <div className='contact container'>
-       <input 
-       name='number'
-       type="tel"
-       onChange={handleChange}
-       value={phone.number}
-       />
-      
-      
-       <Button color="blue" link={`tel:${phone.number}`}>
-         <CallIcon />
-       </Button>
-       <Button color="green" link={`https://wa.me/${phone.number}`} target={true}>
-         <WhatsappIcon />
-       </Button>
-     </div>
-      
+    
+    <AppRouter />
     </>
   )
 }
 
 export default App
+
+
+
+
+/* TODO:
+1.- 3 campos / numero / nombre / campaña
+2.- guardar registro
+  que contenga - numero cel - puesto - fecha - documentos completos
+
+  filtrar por campaña / por dia
+
+
+
+*/
