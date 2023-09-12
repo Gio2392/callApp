@@ -1,4 +1,4 @@
 .callapp{
-    --width_aside: 30rem; 
+    min-height: 100vh;
     position: relative;
 }

@@ -1,0 +1,20 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+}
+
+.input {
+    border-radius: 1rem;
+    outline: none;
+    /* border: thin solid var(--gray); */
+    border: thin solid var(--bgDark);
+    padding: 1rem 1.5rem;
+
+
+
+
+    background: var(--inputDark);
+    color: var(--white);
+}

@@ -1,12 +1,10 @@
 
-import { Contacts } from '../components/contact'
-import { FormComplete } from '../components/form/FormComplete'
+import { Contacts, FormComplete } from '../components'
 import './mainContent.css'
 
 export const MainContent = () => {
   return (
-    <main>
-      <h5>Crear registro</h5>
+    <main className='main__content container'>      
       <FormComplete />
       <Contacts />
     </main>

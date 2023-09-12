@@ -1,6 +1,12 @@
-import { collection, doc, getDocs, setDoc } from 'firebase/firestore/lite';
+import {
+  collection,
+  deleteDoc,
+  doc,
+  getDocs,
+  setDoc,
+} from 'firebase/firestore/lite';
 import { FirebaseDB } from '../../firebase/config';
-import { setRegisters } from './callingSlice';
+import { deleteRegisterById, setRegisters } from './callingSlice';
 
 export const startNewRegister = (datos) => {
   return async (dispatch, getState) => {
@@ -32,6 +38,18 @@ export const startLoadingRegisters = () => {
     });
 
     dispatch(setRegisters(registers));
+    // console.log(registers);
+  };
+};
+
+export const startDeleteAllregisters = (id) => {
+  return async (dispatch, getState) => {
+    const { uid } = getState().auth;
+
+    const docRef = doc(FirebaseDB, `${uid}/contacts/contact/${id}`);
+    await deleteDoc(docRef);
+
+    dispatch(deleteRegisterById(id));
     // console.log(registers);
   };
 };

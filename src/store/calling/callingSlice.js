@@ -12,7 +12,12 @@ export const callingSlice = createSlice({
     setRegisters: (state, action) => {
       state.registers = action.payload;
     },
+    deleteRegisterById: (state, action) => {
+      state.registers = state.registers.filter(
+        (register) => register.id !== action.payload
+      );
+    },
   },
 });
 
-export const { setRegisters } = callingSlice.actions;
+export const { setRegisters, deleteRegisterById } = callingSlice.actions;

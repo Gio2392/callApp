@@ -14,20 +14,19 @@ export const Aside = () => {
     }
   return (
     <aside className='aside'>
-       <div className='aside__top'>
+       
          <Profile />
         
          {/* TODO: PUT NAVBAR HERE */}
-       </div>
-        <footer>
-            <button                
-                onClick={onLogout}
-                className='aside__btn'
-            >
-                <span>Cerrar sesión</span>
-                <LogoutIcon />
-            </button>
-        </footer>
+    
+       
+          <button                
+              onClick={onLogout}
+              className='aside__btn'
+          >
+              <LogoutIcon />
+          </button>
+      
     </aside>
   )
 }

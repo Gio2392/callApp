@@ -1,14 +1,51 @@
 .contacts{
-width: 50rem;
+}
+.contact__card{
+    display: grid;
+    gap: 1rem;
+
 }
 .contact__item{
+    background: #fafafa10;
+    backdrop-filter: blur(0.4rem);
+    border: .3rem solid #fafafa15;
+    padding: 1rem;
+    color: var(--white);
     display: flex;
     justify-content: space-between;
+    border-radius: 1rem;
 }
 .contact__info{
     display: flex;
     flex-direction: column;
+    gap: .5rem;
 }
 .contact__actions{
     display: flex;
+    gap: .5rem;
+}
+.contact__info .phone{
+    font-weight: var(--fw-black);
+    font-size: 2rem;
+}
+.contact__info .username{
+    font-weight: var(--fw-regular);
+    font-size: 1.5rem;
+}
+.btn__content{
+    display: flex;
+    justify-content: flex-end;
+}
+.btn__third{
+    background: transparent;
+    font-weight: var(--fw-black);
+    outline: none;
+    border: none;
+    color: var(--red);
+    margin-bottom: 2rem;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+.btn__third:hover{
+    opacity: .5;
 }

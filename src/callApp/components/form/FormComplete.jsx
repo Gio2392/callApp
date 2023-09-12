@@ -1,8 +1,10 @@
 import { useDispatch } from "react-redux"
 import { Button } from "../../../components"
 import { useForm } from "../../../hooks"
-import { CallIcon, SavelIcon, WhatsappIcon } from "../../../icons"
+import { SavelIcon } from "../../../icons"
 import { startNewRegister } from "../../../store/calling/thunks"
+
+import './form.css'
 
 export const FormComplete = () => {
 
@@ -20,8 +22,9 @@ export const FormComplete = () => {
     }
     
   return (
-    <div className='container form'>
-      <div className='contact'>
+    <div className='form__contact'>
+      <h3 className="title">Crear Registro</h3>
+      <form className='form'>
         <input 
         className='input'
         name='number'
@@ -29,16 +32,8 @@ export const FormComplete = () => {
         onChange={handleChange}
         value={form.number}
         placeholder='Ingrese el número'
+        required
        />
-       
-       
-        <Button color="blue" link={`tel:${form.number}`}>
-          <CallIcon />
-        </Button>
-        <Button color="green" link={`https://wa.me/+51${form.number}`} target={true}>
-          <WhatsappIcon />
-        </Button>
-      </div>
       
        <input 
        className='input'
@@ -48,21 +43,14 @@ export const FormComplete = () => {
         value={form.name}
         placeholder='Ingrese el nombre'
        />
-       <input 
-       className='input'
-        name='job'
-        type="text"
-        onChange={handleChange}
-        value={form.job}
-        placeholder='Ingrese el nombre de la campaña'
-       />
+      
        <Button 
        color="red" 
-       link={`tel:${form.number}`}
        onClick={ onNewRegister }
        >
           <SavelIcon />
         </Button>
-     </div>
+     </form>
+    </div>
   )
 }

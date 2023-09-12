@@ -6,7 +6,7 @@ import './callapppage.css'
 export const CallAppPage = () => {
   return (
     <div className='callapp'>
-      {/* <Aside /> */}
+      <Aside />
       
       <MainContent />
       

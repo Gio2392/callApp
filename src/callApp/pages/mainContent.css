@@ -1,5 +1,10 @@
-main{
-    margin-left: var(--width_aside);
-    padding: 2rem;
-    color: var(--white);
+.main__content{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+@media (min-width: 500px) {
+    .main__content{
+        grid-template-columns: 1fr 1fr;
+    }
 }
